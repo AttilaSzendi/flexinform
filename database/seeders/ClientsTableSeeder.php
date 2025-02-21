@@ -3,11 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Client;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 
-class ClientTableSeeder extends Seeder
+class ClientsTableSeeder extends Seeder
 {
     public function run(): void
     {
@@ -28,6 +27,5 @@ class ClientTableSeeder extends Seeder
                 'card_number' => $client['idcard'],
             ]);
         }
-
     }
 }
