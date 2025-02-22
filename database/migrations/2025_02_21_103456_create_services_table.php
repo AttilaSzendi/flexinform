@@ -25,6 +25,7 @@ return new class extends Migration
             $table->dateTime('event_time')->nullable();
             $table->string('document_id');
             $table->timestamps();
+            $table->unique(['client_id', 'car_id', 'log_number']);
         });
     }
 

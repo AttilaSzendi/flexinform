@@ -16,9 +16,10 @@ class ClientResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'cardName' => $this->card_name,
+            'cardNumber' => $this->card_number,
             'createdAt' => $this->created_at,
             'updatedAt' => $this->updated_at,
+            'cars' => CarResource::collection($this->whenLoaded('cars')),
         ];
     }
 }
